@@ -50,3 +50,13 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
+
+## Features
+
+* Vue3
+* Vite
+* PUG
+* Sass
+* TypeScript
+* Vue router
+* GSAP
