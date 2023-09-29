@@ -1,0 +1,15 @@
+{{#shapes}}{{#selector.dimensions}}{{expression}}{{^last}},
+{{/last}}{{/selector.dimensions}} {
+  width: {{width.outer}}px;
+  height: {{height.outer}}px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  {{#selector.dimensions}}{{expression}}{{^last}},
+  {{/last}}{{/selector.dimensions}} {
+    aspect-ratio: {{width.outer}} / {{height.outer}};
+    height: auto;
+  }
+}
+
+{{/shapes}}

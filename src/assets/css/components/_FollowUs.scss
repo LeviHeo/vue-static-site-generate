@@ -1,0 +1,16 @@
+// FollowUS
+.components--followus {
+  padding:30px 0;
+  .followus-inner {
+    padding-left:var(--root--spacing--side);
+  }
+
+  .followus-title {
+      text-transform: uppercase;
+      @include font-size-h1
+  }
+
+  .followus-content {
+    margin-top:30px;
+  }
+}

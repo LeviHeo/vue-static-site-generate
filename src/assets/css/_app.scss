@@ -1,0 +1,159 @@
+// Global app style
+:root, body {
+  margin:0;
+  padding:0;
+  min-height: 100svh;
+}
+
+* {
+  box-sizing: border-box;
+  &:focus{
+    outline-color: var(--color--highlight);
+    outline-offset: 5px;
+  }
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: var(--color--highlight);
+}
+
+::selection {
+  color: white;
+  background: var(--color--highlight);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  padding:0;
+  margin:0;
+  font-family: var(--font--title);
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1;
+  color:#35241F;
+  // padding:0 var(--root--spacing--side);
+
+  &.type-line {
+    position: relative;
+    padding-top:70px;
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      top:0px;
+      left:50%;
+
+      content:"";
+      display: block;
+      width:1px;
+      height:40px;
+      background-color: #000000;
+    }
+  }
+}
+
+h1 {@include font-size-h1}
+h2 {@include font-size-h2}
+h3 {@include font-size-h3}
+h4 {@include font-size-h4}
+h5 {@include font-size-h5}
+
+body {
+  background-color: #fdfbf9;
+}
+
+input {
+  font-family: var(--font--default--family);
+}
+
+section {
+  + section {
+    margin-top:20px;
+  }
+
+  h2, h3, h4 {
+    + .section-content {
+      margin-top:60px;
+    }
+  }
+}
+
+body {
+  font-size: 0.875rem;
+  @include breakpoint-min($md) {
+    font-size: 1rem;
+  }
+}
+
+img {
+  display: block;
+  width:100%;
+  max-width:100%;
+}
+
+button, ul, li, p, figure {
+  padding:0;
+  margin:0;
+}
+
+li {
+  list-style-type: none;
+  list-style: none;
+}
+
+main {
+  position: relative;
+  padding-top:var(--root--header--height);
+  min-height:500px;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.no-pd {
+  padding:0;
+}
+
+.blind {
+  @include blind();
+}
+
+.inner-content {
+  @include innerContent;
+}
+
+.inner-content-max {
+  width:1200px;
+  max-width: 100%;
+  margin:0 auto;
+  padding-left:var(--root--spacing--side);
+  padding-right:var(--root--spacing--side);
+}
+
+.inner-padding {
+  padding-left:var(--root--spacing--side);
+  padding-right:var(--root--spacing--side);
+}
+
+.desktop-only {
+  display: none;
+  @include breakpoint-min($nav){
+    display: block;
+  }
+}
+
+.mobile-only {
+  display: block;
+  @include breakpoint-min($nav){
+    display: none;
+  }
+}
+
+.over-hidden {
+  overflow: hidden;
+}

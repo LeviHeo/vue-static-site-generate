@@ -1,0 +1,139 @@
+@use "sass:math";
+
+// Breakpoints
+$xs: 0px;
+$xs-max: 767px;
+
+$sm: 768px;
+$sm-max: 1023px;
+$mobile: $sm-max;
+
+$md: 1024px;
+$md-max: 1279px;
+
+$hd:1440px;
+
+$lg: 1280px;
+$lg-max: 1919px;
+
+$xl: 1920px;
+$xl-max: 9999px;
+
+$nav:1200px;
+
+@mixin breakpoint-min($bp) {
+  @media (min-width: (math.div($bp, 16px) * 1em)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-max($bp) {
+  @media (max-width: (math.div($bp, 16px) * 1em)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min-max($bp1, $bp2) {
+  @media (min-width: (math.div($bp1, 16px) * 1em)) and (max-width: (math.div($bp2, 16px) * 1em)) {
+    @content;
+  }
+}
+
+@mixin aspect-ratio($w, $h) {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  aspect-ratio: #{'calc(#{$w} / #{$h})'};
+
+  @supports not (aspect-ratio: 1 / 1) {
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 0;
+      padding-bottom: #{'calc(#{$h} / #{$w} * 100%)'};
+    }
+  }
+}
+
+@mixin aspect-ratio-inner() {
+  @supports not (aspect-ratio: 1 / 1) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin blind() {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+@mixin hover() {
+	@media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin wh100() {
+  width:100%;
+  height:100%;
+}
+
+@mixin innerContent() {
+  width:var(--root-content-wrap);
+  max-width: 100%;
+  margin:0 auto;
+}
+
+@mixin font-size-h1 {
+  font-family: var(--font--title);
+  font-size: 2.5rem;
+
+  @include breakpoint-min($sm){
+    font-size: 3.5rem;
+  }
+
+  @include breakpoint-min($hd){
+    font-size: 4.75rem;
+  }
+}
+
+@mixin font-size-h2 {
+  font-family: var(--font--title);
+  font-size: 2.8rem;
+  @include breakpoint-min($hd){
+    font-size: 3.5rem;
+  }
+}
+
+@mixin font-size-h3 {
+  font-family: var(--font--title);
+  font-size: 2rem;
+  @include breakpoint-min($hd){
+    font-size: 2.5rem;
+  }
+}
+
+@mixin font-size-h4 {
+  font-family: var(--font--title);
+  font-size: 1.5rem;
+  @include breakpoint-min($hd){
+    font-size: 1.75rem;
+  }
+}
+
+@mixin font-size-h5 {
+  font-family: var(--font--title);
+  font-size: 1.25rem;
+  @include breakpoint-min($hd){
+    font-size: 1.5rem;
+  }
+}

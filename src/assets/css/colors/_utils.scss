@@ -1,0 +1,23 @@
+@use 'sass:color';
+
+@mixin color-scheme($color-keys, $color-scheme) {
+  @each $color-key in $color-keys {
+    --color--#{$color-key}: var(--color--#{$color-key}--#{$color-scheme});
+    // --color--#{$color-key}--rgb: var(--color--#{$color-key}--#{$color-scheme}--rgb);
+  }
+}
+
+@mixin color-map($color-map, $color-scheme) {
+  @each $color-key, $color-name in $color-map {
+    --color--#{$color-key}: var(--color--#{'' + $color-name});
+    // --color--#{$color-key}--#{$color-scheme}--rgb: var(--color--palette--#{'' + $color-name}--rgb);
+  }
+}
+
+@mixin color-palette($color-palettes) {
+  @each $color-name, $color in $color-palettes {
+    // Legacy color notation syntax, for Safari 11
+    --color--#{'' + $color-name}: rgba(#{color.red($color)}, #{color.green($color)}, #{color.blue($color)}, #{color.alpha($color)});
+    // --color--#{'' + $color-name}--rgb: #{color.red($color)}, #{color.green($color)}, #{color.blue($color)};
+  }
+}

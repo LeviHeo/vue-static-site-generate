@@ -1,0 +1,70 @@
+// RichText Element
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width:100%;
+  border-collapse: collapse;
+  text-align: center;
+  thead {
+    color:#ffffff;
+    background-color: var(--color--brown-3);
+  }
+
+  th, td {
+    padding:0.875rem 1rem;
+  }
+
+  th {
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  td {
+    font-size: 1rem;
+  }
+
+  tbody {
+    background-color: #fff;
+    tr {
+      &:nth-child(2n) {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
+
+ul.disclaimer {
+  padding-left:1rem;
+  li {
+    position: relative;
+    font-size:0.875rem;
+    + li {
+      margin-top:14px;
+    }
+  }
+
+  .bullet {
+    position: absolute;
+    top:0;
+    left:-1rem;
+  }
+}
+
+ul.remark {
+  padding-left:1rem;
+  li {
+    position: relative;
+    font-size:0.75rem;
+    + li {
+      margin-top:5px;
+    }
+  }
+
+  .bullet {
+    position: absolute;
+    top:0;
+    left:-1rem;
+  }
+}

@@ -1,0 +1,15 @@
+.fade-enter-active {
+  transition: opacity var(--root--duration--fast) ease;
+}
+
+.fade-enter {
+  transition: opacity var(--root--duration--fast) ease;
+}
+
+.fade-leave-active {
+  transition: opacity var(--root--duration--fast) ease;
+}
+
+.fade-leave-to, .fade-enter-from{
+  opacity: 0;
+}

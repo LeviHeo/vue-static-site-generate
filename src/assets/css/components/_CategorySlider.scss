@@ -1,0 +1,112 @@
+// Category Slider
+.components--category-slider {
+  padding:var(--root--spacing--section) 0;
+  .category-items-wrap {
+    position: relative;
+    margin:70px auto 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  img {
+    max-height: 100%;
+  }
+
+  .category-title {
+    position: absolute;
+    top:20%;
+    left:50px;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: 0px 0px;
+    line-height: 1;
+    font-family: var(--font--title);
+    @include font-size-h3;
+  }
+
+  .category-controller {
+    position: absolute;
+    z-index: 20;
+    top:0;
+    pointer-events: none;
+    left:130px;
+
+    .btn-controller {
+      pointer-events: auto;
+      top:80%;
+
+      &.btn-prev {
+        left:-40px;
+      }
+
+      &.btn-next {
+        right:-40px;
+      }
+    }
+
+    .controller-inner {
+      width:440px;
+      height:650px;
+      position: relative;
+    }
+  }
+
+  .category-item {
+    position: relative;
+    width:300px;
+    height:100%;
+    left:0px;
+    .category-item-inner {
+      width:300px;
+      transition: width 0.2s linear;
+    }
+
+    .thumb {
+      margin-bottom:1rem;
+    }
+
+    .label {
+      text-align: center;
+    }
+  }
+
+  .category-action {
+    margin:1rem 0;
+    text-align: center;
+  }
+
+  .swiper {
+    @include wh100;
+    margin:0;
+    position: relative;
+    z-index: 10;
+    width:calc(100vw - 150px);
+    min-height:650px;
+  }
+
+  .swiper-slide-active, .swiper-slide-prev {
+    .category-item {
+      transition: left 0.5s ease-in-out;
+      .category-item-inner {
+        width:440px;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev) {
+    .category-item {
+      left:140px;
+    }
+  }
+
+  .swiper-slide-prev {
+    .category-item {
+      left:-140px;
+    }
+  }
+
+  .swiper-slide {
+    width:auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+}

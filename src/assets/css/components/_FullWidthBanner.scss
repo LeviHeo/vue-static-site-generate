@@ -1,0 +1,83 @@
+// FullWidthBanner
+.components--fullwidthbanner {
+
+  &.event {
+    .fullwidth-banner-inner {
+      height:550px;
+      .banner-content {
+        .banner-title {
+          margin-bottom:50px;
+        }
+      }
+    }
+  }
+
+  .fullwidth-banner-inner {
+    position: relative;
+    padding:70px var(--root--spacing--side) 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color:#ffffff;
+
+    .banner-label {
+      text-transform: uppercase;
+      margin-bottom:50px;
+    }
+    .banner-title {
+      color:#ffffff;
+      margin-bottom:2rem;
+    }
+
+    .banner-desc {
+      width:600px;
+      margin:0 auto;
+      max-width: 100%;
+    }
+
+    * {
+      + .banner-action {
+        margin-top:1.5rem;
+      }
+    }
+  }
+
+  .banner-bg {
+    position: absolute;
+    z-index: 0;
+    top:0;
+    left:0;
+    @include wh100;
+
+    .bg-inner {
+      position: relative;
+      @include wh100;
+      &:before {
+        content:"";
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top:0;
+        left:0;
+        @include wh100;
+        background-color: rgba(#000000, 0.65);
+      }
+
+      img {
+        position: absolute;
+        z-index: 0;
+        top:50%;
+        left:50%;
+        height:100%;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.pd-info {
+  color:#000000;
+  text-align: center;
+  .pd-thumb {
+    margin:0 auto 1.5rem;
+  }
+  .pd-name {
+    font-size: 0.875rem;
+    margin-bottom:0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  p {
+    max-width: 90%;
+    margin:0 auto;
+  }
+}
+
+.pd-action {
+  margin-top:30px;
+}

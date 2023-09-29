@@ -1,0 +1,43 @@
+// BreadCrumb
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap:5px 0px;
+
+  li {
+    color:#131313;
+    font-size: 0.875rem;
+    margin-right:15px;
+    line-height: 1;
+    + li {
+      position: relative;
+      margin-left:15px;
+      &:before {
+        content:"/";
+        position: absolute;
+        top:0;
+        left:-15px;
+        transform: translateX(-50%);
+        color:#707070;
+      }
+    }
+    a {
+      display: block;
+      color:#707070;
+      font-size: 0.875rem;
+      line-height: 1;
+
+      &:hover, &:focus {
+        color:var(--color--highlight);
+      }
+    }
+  }
+
+  + .page-header-content,  + * .page-header-content {
+    border-top:1px solid transparent;
+    margin-top:30px;
+    @include breakpoint-min($sm){
+      margin-top:50px;
+    }
+  }
+}

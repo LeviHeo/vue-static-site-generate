@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use 'sass:color';
+@import './utils';
+
+$color-palettes: (
+  brown-1:#34495e,
+  brown-2:#34495e,
+  brown-3:#34495e,
+  brown-4:#34495e,
+
+  gold-1:#34495e,
+
+  white: #ffffff,
+  grey-1: #fbfbfb,
+  grey-2:#f8f7f4,
+  grey-3:#F8F8F8,
+  grey-4:#E4E4E4,
+  green-4:#13774A,
+  text:#131313,
+);
+
+$color-map: (
+  highlight:brown-1,
+  highlight-hover:brown-2,
+  background:grey-3,
+  rolex:green-4,
+  primary:gold-1,
+  border:grey-4,
+);
+
+:root {
+  @include color-palette($color-palettes);
+  @include color-map($color-map, default);
+}
+

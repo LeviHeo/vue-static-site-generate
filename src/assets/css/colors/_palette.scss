@@ -1,0 +1,36 @@
+@use 'sass:map';
+@use 'sass:color';
+@import './utils.scss';
+
+$color-palettes: (
+  blue-1: #0653b6,
+  blue-2: #1c69d4,
+  blue-3: color.change(#1c69d4, $alpha: 0.3),
+  blue-4: #1f94ff,
+  blue-5: #1C60D4,
+
+  red: #d20000,
+  yellow: #ffad1f,
+  green: #3db014,
+
+  white: #ffffff,
+  grey-1: #4d4d4d,
+  grey-2: #666666,
+  grey-3: #8e8e8e,
+  grey-4: #e6e6e6,
+  grey-4a: #d8d8d8,
+  grey-5: #f2f2f2,
+  grey-6: #f7f7f7,
+  grey-7: color.change(#4d4d4d, $alpha: 0.3),
+  grey-8: color.change(#e6e6e6, $alpha: 0.3),
+  grey-9: color.change(#C5C7C9, $alpha: 0.3),
+  grey-10: color.change(#C5C7C9, $alpha: 0.5),
+  grey-11: #bbbbbb,
+  anthra-cite: #262626,
+  black: #000000,
+  text:#131313,
+);
+
+:root {
+  @include color-palette($color-palettes);
+}

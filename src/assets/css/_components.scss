@@ -1,0 +1,127 @@
+
+.aside-back-to-top {
+  position: fixed;
+  z-index:var(--z-index-aside-back-to-top);
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  bottom:2rem;
+  right:2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.1);
+  opacity: 1;
+
+  transition: opacity var(--root--duration--fast) ease-in-out;
+
+  &.unsticky {
+    position:absolute;
+  }
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  button {
+    @include wh100;
+    border-radius: 50%;
+    display: block;
+    color:var(--color--highlight);
+    background-color: #fff;
+
+    transition: color var(--root--duration--fast) ease-in-out,
+                background-color var(--root--duration--fast) ease-in-out;
+
+    &:hover, &:focus {
+      color:#fff;
+      background-color: var(--color--highlight);
+    }
+  }
+  .icon {
+    height:18px;
+    top:2px;
+  }
+}
+
+.static-page-content-wrap {
+  @include innerContent;
+  padding:var(--root--spacing--page-top) var(--root--spacing--side) 70px;
+}
+
+.page-header-content {
+  width:100%;
+  display: block;
+
+  h1, h2 {
+    + * {
+      margin-top:30px;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+// PDP Page Header
+.pdp-page-header {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding:0 var(--root--spacing--side);
+  width:var(--root-content-wrap);
+  max-width: 100%;
+  margin:20px auto;
+
+  @include breakpoint-min($sm){
+    padding-top:var(--root--spacing--page-top);
+    margin:0 auto;
+    // margin:60px auto 50px;
+  }
+
+  h1, h2 {
+    text-align: left;
+  }
+
+  .page-header-content {
+    @include breakpoint-min($sm){
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      h1, h2 {
+        min-width:50%;
+        max-width: 50%;
+
+        + * {
+          margin-top:0;
+        }
+      }
+
+      p {
+        text-align: left;
+        width:600px;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@import './components/Mask';
+@import './components/RichText';
+@import './components/BreadCrumb';
+@import './components/KeyVisual';
+@import './components/LeftVisualRightContentSlider';
+@import './components/LeftVisualRightContentBanner';
+@import './components/FullWidthBanner';
+@import './components/FollowUs';
+@import './components/ToggleList';
+@import './components/CollectionSlider';
+@import './components/Highlights';
+@import './components/ProductList';
+@import './components/CategorySlider';
+@import './components/ShopList';

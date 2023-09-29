@@ -1,0 +1,74 @@
+// Left Visual Right Content
+.components--left-visual-right-content-slider{
+  .left-visual-right-content-inner {
+    padding:0 10px;
+    display: flex;
+    align-items: center;
+    height:524px;
+    .left-visual {
+      width:calc(100% - 540px);
+      img {
+        width:100%;
+        height:524px;
+        object-fit: cover;
+      }
+    }
+    .right-content {
+      width:540px;
+      height:100%;
+
+      .right-content-inner {
+        padding:1.5rem 2.5rem;
+        height:100%;
+      }
+
+      .swiper {
+        height:100%;
+      }
+
+      .swiper-wrapper {
+        height:calc(100% - 50px);
+      }
+
+      .slide-controller {
+        display: flex;
+        gap:10px;
+      }
+
+      .right-content-item {
+        .content-title {
+          position: relative;
+          padding-top:2rem;
+          margin-bottom:2rem;
+
+          &:before {
+            position: absolute;
+            top:0;
+            left:0;
+            content:"";
+            display: block;
+            width:30px;
+            height:1px;
+            background-color: var(--color--brown-1);
+          }
+        }
+        p {
+          + .content-action {
+            margin-top:2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-controller  {
+    position: static;
+    transform: none;
+    width:40px;
+    height:40px;
+    .icon {
+      width:7px;
+      color:#707070;
+    }
+  }
+}

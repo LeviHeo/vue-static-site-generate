@@ -1,0 +1,30 @@
+{
+  "dest": "./src/assets",
+  "shape": {
+    "transform": [{
+      "svgo": {
+        "plugins": [{
+          "name": "preset-default",
+          "params": {
+            "overrides": {}
+          }
+        }]
+      }
+    }]
+  },
+  "mode": {
+    "stack": {
+      "dest": ".",
+      "prefix": ".svg-icon--%s",
+      "rootviewbox": false,
+      "sprite": "images/sprites.svg",
+      "dimensions": "%s",
+      "render": {
+        "css": {
+          "template": "./svg-sprite.css.template",
+          "dest": "./css/sprites.css"
+        }
+      }
+    }
+  }
+}

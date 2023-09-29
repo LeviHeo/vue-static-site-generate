@@ -1,0 +1,13 @@
+@mixin root--zindex {
+  --zindex-popup-wrap:130;
+  --zindex-popup-mask:120;
+  --zindex-skipbar:110;
+  --zindex-cookie-consent:110;
+  --zindex-header:100;
+  --zindex-header-mask:99;
+  --zindex-side-navigation:98;
+  --z-index-aside-back-to-top:98;
+  --zindex-sub-menu-wrap:98;
+  --zindex-sub-menu-wrap-bg:97;
+  --zindex-footer-locale-option:10;
+}

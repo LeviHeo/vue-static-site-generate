@@ -1,0 +1,396 @@
+.svg-icon--after-service {
+  width: 20px;
+  height: 21px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--after-service {
+    aspect-ratio: 20 / 21;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-next {
+  width: 9px;
+  height: 14px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-next {
+    aspect-ratio: 9 / 14;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-next-long {
+  width: 58px;
+  height: 5px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-next-long {
+    aspect-ratio: 58 / 5;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-prev {
+  width: 9px;
+  height: 14px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-prev {
+    aspect-ratio: 9 / 14;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-prev-long {
+  width: 58px;
+  height: 5px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-prev-long {
+    aspect-ratio: 58 / 5;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-right {
+  width: 7px;
+  height: 12px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-right {
+    aspect-ratio: 7 / 12;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-right-serif {
+  width: 18px;
+  height: 16px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-right-serif {
+    aspect-ratio: 18 / 16;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-up {
+  width: 14px;
+  height: 9px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-up {
+    aspect-ratio: 14 / 9;
+    height: auto;
+  }
+}
+
+.svg-icon--arrow-up-top {
+  width: 16px;
+  height: 18px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--arrow-up-top {
+    aspect-ratio: 16 / 18;
+    height: auto;
+  }
+}
+
+.svg-icon--close {
+  width: 14px;
+  height: 14px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--close {
+    aspect-ratio: 14 / 14;
+    height: auto;
+  }
+}
+
+.svg-icon--contact-us {
+  width: 16px;
+  height: 14px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--contact-us {
+    aspect-ratio: 16 / 14;
+    height: auto;
+  }
+}
+
+.svg-icon--facebook {
+  width: 20px;
+  height: 20px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--facebook {
+    aspect-ratio: 20 / 20;
+    height: auto;
+  }
+}
+
+.svg-icon--gift {
+  width: 22px;
+  height: 21px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--gift {
+    aspect-ratio: 22 / 21;
+    height: auto;
+  }
+}
+
+.svg-icon--globle {
+  width: 24px;
+  height: 24px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--globle {
+    aspect-ratio: 24 / 24;
+    height: auto;
+  }
+}
+
+.svg-icon--instagram {
+  width: 24px;
+  height: 24px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--instagram {
+    aspect-ratio: 24 / 24;
+    height: auto;
+  }
+}
+
+.svg-icon--jewelry {
+  width: 26px;
+  height: 21px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--jewelry {
+    aspect-ratio: 26 / 21;
+    height: auto;
+  }
+}
+
+.svg-icon--link {
+  width: 18px;
+  height: 18px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--link {
+    aspect-ratio: 18 / 18;
+    height: auto;
+  }
+}
+
+.svg-icon--locale-cn {
+  width: 20px;
+  height: 20px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--locale-cn {
+    aspect-ratio: 20 / 20;
+    height: auto;
+  }
+}
+
+.svg-icon--locale-hk {
+  width: 20px;
+  height: 20px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--locale-hk {
+    aspect-ratio: 20 / 20;
+    height: auto;
+  }
+}
+
+.svg-icon--locale-my {
+  width: 20px;
+  height: 20px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--locale-my {
+    aspect-ratio: 20 / 20;
+    height: auto;
+  }
+}
+
+.svg-icon--locale-sg {
+  width: 20px;
+  height: 20px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--locale-sg {
+    aspect-ratio: 20 / 20;
+    height: auto;
+  }
+}
+
+.svg-icon--location {
+  width: 14px;
+  height: 16px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--location {
+    aspect-ratio: 14 / 16;
+    height: auto;
+  }
+}
+
+.svg-icon--location-solid {
+  width: 14px;
+  height: 16px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--location-solid {
+    aspect-ratio: 14 / 16;
+    height: auto;
+  }
+}
+
+.svg-icon--minus {
+  width: 16px;
+  height: 3px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--minus {
+    aspect-ratio: 16 / 3;
+    height: auto;
+  }
+}
+
+.svg-icon--plus {
+  width: 16px;
+  height: 15px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--plus {
+    aspect-ratio: 16 / 15;
+    height: auto;
+  }
+}
+
+.svg-icon--search {
+  width: 22px;
+  height: 22px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--search {
+    aspect-ratio: 22 / 22;
+    height: auto;
+  }
+}
+
+.svg-icon--share {
+  width: 19px;
+  height: 22px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--share {
+    aspect-ratio: 19 / 22;
+    height: auto;
+  }
+}
+
+.svg-icon--tel {
+  width: 18px;
+  height: 18px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--tel {
+    aspect-ratio: 18 / 18;
+    height: auto;
+  }
+}
+
+.svg-icon--time {
+  width: 19px;
+  height: 18px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--time {
+    aspect-ratio: 19 / 18;
+    height: auto;
+  }
+}
+
+.svg-icon--wechat {
+  width: 24px;
+  height: 24px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--wechat {
+    aspect-ratio: 24 / 24;
+    height: auto;
+  }
+}
+
+.svg-icon--weibo {
+  width: 24px;
+  height: 24px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--weibo {
+    aspect-ratio: 24 / 24;
+    height: auto;
+  }
+}
+
+.svg-icon--whatsapp {
+  width: 16.5px;
+  height: 16.5px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--whatsapp {
+    aspect-ratio: 16.5 / 16.5;
+    height: auto;
+  }
+}
+
+.svg-icon--youtube {
+  width: 24px;
+  height: 24px;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .svg-icon--youtube {
+    aspect-ratio: 24 / 24;
+    height: auto;
+  }
+}
+

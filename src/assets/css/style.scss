@@ -1,0 +1,111 @@
+@use "sass:math";
+@use 'sass:map';
+
+@import "./mixin";
+@import "./colors/colors";
+@import "./fonts/font-face";
+@import "./zindex";
+
+@import "./plugin/swiper";
+
+@mixin root--variables--fonts {
+  --font--default--family: "Montserrat", Arial, Helvetica, sans-serif;
+  --font--title:"Cormorant Garamond", Garamond, serif;
+  --font--description:"Montserrat", Arial, Helvetica, sans-serif;
+  &:lang(tc) {
+    --font--default--family: "微軟正黑體", "Microsoft JhengHei", "Montserrat", Arial, Helvetica, sans-serif;
+    --font--title:"微軟正黑體", "Microsoft JhengHei", "Cormorant Garamond", Arial, Helvetica, sans-serif;
+    --font--description:"微軟正黑體", "Microsoft JhengHei", "Montserrat", Arial, Helvetica, sans-serif;
+  }
+
+  &:lang(sc) {
+    --font--default--family: "微軟正黑體", "Microsoft JhengHei", "Montserrat", Arial, Helvetica, sans-serif;
+    --font--title:"微軟正黑體", "Microsoft JhengHei", "Cormorant Garamond", Arial, Helvetica, sans-serif;
+    --font--description:"微軟正黑體", "Microsoft JhengHei", "Montserrat", Arial, Helvetica, sans-serif;
+  }
+}
+
+@mixin root--variables--spacing {
+  --root--spacing--xs: 1rem;
+  --root--spacing--md: 1.25rem;
+  --root--spacing: var(--root--spacing--xs);
+
+  --root--spacing--page-top:20px;
+  @include breakpoint-min($md) {
+    --root--spacing: var(--root--spacing--md);
+  }
+
+  --root--spacing--sub-section--xs: calc(1.5 * var(--root--spacing--xs));
+  --root--spacing--sub-section--md: calc(1.5 * var(--root--spacing--md));
+  --root--spacing--sub-section: calc(1.5 * var(--root--spacing));
+
+  --root--spacing--side--xs: calc(2 * var(--root--spacing--xs));
+  --root--spacing--side--md: calc(2 * var(--root--spacing--md));
+  --root--spacing--side: calc(1 * var(--root--spacing));
+
+  @include breakpoint-min($md) {
+    --root--spacing--side: calc(2 * var(--root--spacing));
+    --root--spacing--page-top:50px;
+  }
+
+  --root--spacing--section--xs: calc(3 * var(--root--spacing--xs));
+  --root--spacing--section--md: calc(3 * var(--root--spacing--md));
+  --root--spacing--section: calc(3 * var(--root--spacing));
+}
+
+@mixin root--variables--header-and-footer {
+  --root--logo-height: 35px;
+  --root--header--height:95px;
+  --root--header--height-fold:95px;
+  --root--skipbar--height:40px;
+
+  @include breakpoint-min($md) {
+    --root--logo-height: 35px;
+    --root--header--height:95px;
+    --root--header--height-fold:95px;
+    --root--skipbar--height:40px;
+  }
+
+  @include breakpoint-min($nav) {
+    --root--logo-height: 60px;
+    --root--header--height:179px;
+    --root--header--height-fold:90px;
+    --root--skipbar--height:40px;
+  }
+}
+
+@mixin root--variables--movements {
+  --root--duration--fast: 300ms;
+  --root--duration--normal: 500ms;
+  --root--duration--slow: 750ms;
+}
+
+@mixin root--variables--buttons {
+  --root--button--height:54px;
+}
+
+:root {
+  @include root--variables--fonts;
+  @include root--variables--header-and-footer;
+  @include root--variables--movements;
+  @include root--variables--spacing;
+  @include root--variables--buttons;
+  @include root--zindex;
+
+  font-family: var(--font--default--family);
+  font-size: 1rem;
+  line-height:1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color--background);
+  color: var(--color--text);
+
+  --root-content-wrap:1440px;
+  --root-letter-spacing:0.04em;
+}
+
+@import "./actions";
+@import "./transition";
+@import "./app";
+@import "./components";

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 100;
+  font-display: swap;
+  src: url('$fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal; /* 400 */
+  font-display: swap;
+  src: url('$fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-display: swap;
+  src: url('$fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-display: swap;
+  src: url('$fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: bold; /* 700 */
+  font-display: swap;
+  src: url('$fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-weight: normal;
+  font-display: swap;
+  src: url('$fonts/CormorantGaramond-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-weight: bold;
+  font-display: swap;
+  src: url('$fonts/CormorantGaramond-Medium.ttf') format('truetype');
+}

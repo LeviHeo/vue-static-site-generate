@@ -1,0 +1,19 @@
+@import './utils.scss';
+
+$color-map: (
+  background: white,
+  background-box: grey-6,
+  text: anthra-cite,
+  text-aside: grey-3,
+  text-hover: grey-1,
+  highlight: blue-2,
+  highlight-hover: blue-1,
+  dimmed: grey-4a,
+  dimmed-overlay: grey-8,
+  warning: yellow,
+  error: red,
+);
+
+:root {
+  @include color-map($color-map, default);
+}

@@ -1,0 +1,24 @@
+// Mask Dim
+#mask {
+  position: fixed;
+  z-index: var(--zindex-header-mask);
+  top:0;
+  left:0;
+  @include wh100;
+  background-color: #000000;
+  opacity: 0;
+  display: none;
+  transition: opacity var(--root--duration--fast) ease-in-out;
+
+  &.show {
+    display: block;
+  }
+
+  &.fade-in {
+    opacity: 0.5;
+  }
+
+  &.popup {
+    z-index: var(--zindex-popup-mask);
+  }
+}
